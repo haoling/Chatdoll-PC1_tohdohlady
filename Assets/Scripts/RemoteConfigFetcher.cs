@@ -4,8 +4,9 @@ using Unity.Services.Authentication;
 using Unity.Services.Core;
 using UnityEngine;
 using ChatdollKit.Extension.Google;
+using ChatdollKit.Extension.Voicevox;
 
-public class RemoteConfigGoogleApiKey : MonoBehaviour
+public class RemoteConfigFetcher : MonoBehaviour
 {
     public struct userAttributes {}
     public struct appAttributes {}
@@ -45,9 +46,15 @@ public class RemoteConfigGoogleApiKey : MonoBehaviour
         {
             GetComponent<GoogleVoiceRequestProvider>().ApiKey = RemoteConfigService.Instance.appConfig.GetString("GOOGLE_API_KEY");
         }
-        if (GetComponent<GoogleWakeWordListener>() != null)
+        if (GetComponent<GoogleWakeWordListenerRemoteConfig>() != null)
         {
-            GetComponent<GoogleWakeWordListener>().ApiKey = RemoteConfigService.Instance.appConfig.GetString("GOOGLE_API_KEY");
+            GetComponent<GoogleWakeWordListenerRemoteConfig>().OnFetchRemoteConfig(RemoteConfigService.Instance.appConfig.GetString("GOOGLE_API_KEY"));
+        }
+
+        if (GetComponent<VoicevoxTTSLoader>() != null)
+        {
+            GetComponent<VoicevoxTTSLoader>().EndpointUrl = RemoteConfigService.Instance.appConfig.GetString("VOICEVOX_ENDPOINT_URL");
+            GetComponent<VoicevoxTTSLoader>().enabled = true;
         }
     }   
 }
