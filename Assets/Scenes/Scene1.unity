@@ -4916,7 +4916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7494064416744276939, guid: 9923f5ee8d02c4f658216c52051a0d17, type: 3}
       propertyPath: SpeechService
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7494064416744276942, guid: 9923f5ee8d02c4f658216c52051a0d17, type: 3}
       propertyPath: m_RootOrder
@@ -5016,7 +5016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d311fddc1cc241209a57f2f795eab3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnabled: 0
+  IsEnabled: 1
   AutoStart: 1
   PrintResult: 0
   VoiceDetectionThreshold: 0.1
@@ -5031,7 +5031,7 @@ MonoBehaviour:
   - "\u3001"
   - "\uFF1F"
   - "\uFF01"
-  ApiKey: AIzaSyDsBcchm-K9e5sv5RWgNyosIbxmc2197Mk
+  ApiKey: from RmoteConfig
   Language: ja-JP
   UseEnhancedModel: 0
 --- !u!114 &1707895687
@@ -5046,7 +5046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c99d43ce69ed541e5a22a70ffb983764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnabled: 0
+  IsEnabled: 1
   CancelWords: []
   IgnoreWords:
   - "\u3002"
@@ -5060,7 +5060,7 @@ MonoBehaviour:
   ListeningTimeout: 20
   MessageWindow: {fileID: 0}
   listeningMessage: '[ Listening ... ]'
-  ApiKey: AIzaSyDsBcchm-K9e5sv5RWgNyosIbxmc2197Mk
+  ApiKey: from RmoteConfig
   Language: ja-JP
   UseEnhancedModel: 0
 --- !u!114 &1707895688
@@ -5079,7 +5079,7 @@ MonoBehaviour:
   isDebug: 0
   _Name: Google
   _IsDefault: 1
-  ApiKey: AIzaSyDsBcchm-K9e5sv5RWgNyosIbxmc2197Mk
+  ApiKey: from RmoteConfig
   Language: ja-JP
   Gender: FEMALE
   SpeakerName: ja-JP-Standard-A
