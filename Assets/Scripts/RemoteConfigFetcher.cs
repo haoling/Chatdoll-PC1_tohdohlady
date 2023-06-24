@@ -56,5 +56,11 @@ public class RemoteConfigFetcher : MonoBehaviour
             GetComponent<VoicevoxTTSLoader>().EndpointUrl = RemoteConfigService.Instance.appConfig.GetString("VOICEVOX_ENDPOINT_URL");
             GetComponent<VoicevoxTTSLoader>().enabled = true;
         }
+
+        if (GetComponent<WhisperRestVoiceRequestProvider>() != null)
+        {
+            GetComponent<WhisperRestVoiceRequestProvider>().EndpointUrl = RemoteConfigService.Instance.appConfig.GetString("WHISPER_ENDPOINT_URL");
+            GetComponent<WhisperRestVoiceRequestProvider>().enabled = true;
+        }
     }   
 }
