@@ -62,5 +62,18 @@ public class RemoteConfigFetcher : MonoBehaviour
             GetComponent<WhisperRestVoiceRequestProvider>().EndpointUrl = RemoteConfigService.Instance.appConfig.GetString("WHISPER_ENDPOINT_URL");
             GetComponent<WhisperRestVoiceRequestProvider>().enabled = true;
         }
+
+        if (GetComponent<ChatGPTStreamSkill>() != null)
+        {
+            ChatGPTStreamSkill chatGPTStreamSkill = GetComponent<ChatGPTStreamSkill>();
+            chatGPTStreamSkill.ApiKey = RemoteConfigService.Instance.appConfig.GetString("OPENAI_API_KEY");
+            chatGPTStreamSkill.Model = RemoteConfigService.Instance.appConfig.GetString("CHATGPT_MODEL");
+            chatGPTStreamSkill.MaxTokens = RemoteConfigService.Instance.appConfig.GetInt("CHATGPT_MAX_TOKENS");
+            chatGPTStreamSkill.Temperature = RemoteConfigService.Instance.appConfig.GetFloat("CHATGPT_TEMPERATURE");
+            chatGPTStreamSkill.ChatCondition = RemoteConfigService.Instance.appConfig.GetString("CHATGPT_CONDITION");
+            chatGPTStreamSkill.User1stShot = RemoteConfigService.Instance.appConfig.GetString("CHATGPT_USER_1STSHOT");
+            chatGPTStreamSkill.Assistant1stShot = RemoteConfigService.Instance.appConfig.GetString("CHATGPT_ASSISTANT_1STSHOT");
+            chatGPTStreamSkill.HistoryTurns = RemoteConfigService.Instance.appConfig.GetInt("CHATGPT_HISTORY_TURNS");
+        }
     }   
 }
