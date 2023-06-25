@@ -59,6 +59,8 @@ public class ChatGPTStreamSkill : SkillBase
         });
         ChatGPTFunctions.Add(weatherFunction);
 
+        ChatGPTFunctions.Add(GetComponent<N8nFunctions>().CreateSearchGoogleFunction());
+
         // var balanceFunction = new ChatGPTFunction("get_balance", "銀行の残高を調べます", functions.GetBalanceAsync);
         // balanceFunction.AddProperty("bank_name", new Dictionary<string, object>()
         // {

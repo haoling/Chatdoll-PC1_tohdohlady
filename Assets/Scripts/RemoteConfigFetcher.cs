@@ -75,5 +75,11 @@ public class RemoteConfigFetcher : MonoBehaviour
             chatGPTStreamSkill.Assistant1stShot = RemoteConfigService.Instance.appConfig.GetString("CHATGPT_ASSISTANT_1STSHOT");
             chatGPTStreamSkill.HistoryTurns = RemoteConfigService.Instance.appConfig.GetInt("CHATGPT_HISTORY_TURNS");
         }
+
+        if (GetComponent<N8nFunctions>() != null)
+        {
+            N8nFunctions n8nFunctions = GetComponent<N8nFunctions>();
+            n8nFunctions.n8nUrl = RemoteConfigService.Instance.appConfig.GetString("N8N_URL");
+        }
     }   
 }
