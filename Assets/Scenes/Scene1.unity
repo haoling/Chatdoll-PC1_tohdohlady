@@ -5064,6 +5064,9 @@ PrefabInstance:
       addedObject: {fileID: 1707895706}
     - targetCorrespondingSourceObject: {fileID: 7494064416744276931, guid: 9923f5ee8d02c4f658216c52051a0d17, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1707895721}
+    - targetCorrespondingSourceObject: {fileID: 7494064416744276931, guid: 9923f5ee8d02c4f658216c52051a0d17, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1707895705}
     - targetCorrespondingSourceObject: {fileID: 7494064416744276931, guid: 9923f5ee8d02c4f658216c52051a0d17, type: 3}
       insertIndex: -1
@@ -5156,12 +5159,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707895685}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eee366b6ad7c160489cff86b995a1d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsEnabled: 1
+  IsEnabled: 0
   CancelWords: []
   IgnoreWords:
   - "\u3002"
@@ -5213,6 +5216,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   n8nUrl: 
+--- !u!114 &1707895721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707895685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99d43ce69ed541e5a22a70ffb983764, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsEnabled: 1
+  CancelWords: []
+  IgnoreWords:
+  - "\u3002"
+  - "\u3001"
+  - "\uFF1F"
+  - "\uFF01"
+  PrintResult: 0
+  VoiceDetectionThreshold: 0.1
+  VoiceDetectionMinimumLength: 0.3
+  SilenceDurationToEndRecording: 1
+  ListeningTimeout: 20
+  MessageWindow: {fileID: 1440176064}
+  listeningMessage: '[ Listening ... ]'
+  ApiKey: 
+  Language: ja-JP
+  UseEnhancedModel: 0
 --- !u!1 &1842079677
 GameObject:
   m_ObjectHideFlags: 0
